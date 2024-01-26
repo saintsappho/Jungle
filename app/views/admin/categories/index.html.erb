@@ -1,0 +1,18 @@
+<section class="categories-show">
+  <% @categories.each do |category| %>
+    <header class="page-header">
+      <h1>
+        <%= category.name %>
+        <small>(<%= pluralize category.products.size, 'product' %>)</small>
+      </h1>
+      <div class="category-actions">
+        <%= link_to 'Edit', edit_admin_category_path(category), class: 'btn btn-primary' %>
+        <%#= link_to 'Delete', category_path(category), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+      </div>
+    </header>
+    <!-- Additional content for each category -->
+  <% end %>
+  <div class="category-actions">
+    <%= link_to 'New Category', new_admin_category_path, class: 'btn btn-success' %>
+  </div>
+</section>
