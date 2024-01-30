@@ -10,10 +10,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
   <%= render 'layouts/top_nav' %>
-
+  
   <main class="container">
+  <%if active_sale?%>
+    <p class="alert alert-warning"> There's an active <%= Sale.name %> going on!
+    everything is <%= "15%" %></p>
+  <%end%>
     <%= yield %>
   </main>
 
