@@ -10,7 +10,7 @@
 
 // App
 @import "products";
-
+@import "users";
 // Fonts
 // Global
 body {
@@ -89,19 +89,30 @@ form.button_to {
     font-size: 1.4em;
   }
 }
-
 .sticky-nav {
   background: green;
   position: sticky;
   top: 0;
   z-index: 900;
   font-weight: 700;
-
+  
   .navbar-brand {
     font-weight: 900;
     font-family: "Montserrat";
     text-transform: uppercase;
     font-style: italic;
+  }
+  .navleft{
+    display: flex;
+    align-self: start;
+  }
+  .navright{
+    display: flex;
+    align-self: flex-end;
+  }
+  .end-1 {
+  display: flex;
+  align-items: center;
   }
 }
 

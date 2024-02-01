@@ -4,8 +4,8 @@
 
 <%= form_tag '/login' do %>
 
-  Email: <%= text_field_tag :email %>
-  Password: <%= password_field_tag :password %>
+  <div class="email">Email: <%= text_field_tag :email %></div>
+  <div class="pass">Password: <%= password_field_tag :password %></div>
   <%= submit_tag "Submit" %>
 <%= link_to signup_path, class: "nav-link " do%>Sign Up!<% end%></li>
 <% end %>
